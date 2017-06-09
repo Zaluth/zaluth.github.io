@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+    <img id = "bgImg" src = "https://dl.dropboxusercontent.com/s/yd7tzw84mngzjye/coffee_shop.png?dl=0"/>
+    <div id = "title">
+      <h1 id = "titleH1">You are the chef here</h1>
+      <p id = "titleP">Create your dessert with any flavor you like and as many as you want.<br>Just select the options and your order will be delivered at your home within 24 hours.<br><br>If you prefer, create your dessert at home and come taste it on the next day at our coffee shop.<br>In our sofisticated environment your experience will be even more tasteful.<br><br>Or rather, you may pick on the spot your favorite combination and within minutes it will be delivered at your table.</p>
+    </div>
+
+    <div id = "container1">
+      <div class = "purple" id="pur1">
+        <img src = "https://dl.dropboxusercontent.com/s/yuiwacdkms9wota/filling.png?dl=0"/>
+        <div id="fillings1" class="backFil1">
+          <div id="fil2">
+          <p id = "fillings_p">Choose<br>your fillings</p>
+          <p id="link1" class="link remove">Back</p>
+          <p id="link2" class="link remove" onclick = "next()">Next</p>
+          </div> <!-- fil2 -->
+        </div> 
+      </div> <!-- purple -->
+      <div class = "purple" id="pur2">
+        <img src = "https://dl.dropboxusercontent.com/s/a8xbn46kurh4dh7/topping.png?dl=0"/>
+        <div id="fillings2" class="backFil2">
+          <div id="fil" class="filVisible">
+          <p id = "fillings_p">Choose<br>your toppings</p>
+          <p id="link3" class="link remove">Back</p>
+          <p id="link4" class="link remove" onclick = "finish()">Finish</p>
+          </div> <!-- fil -->
+        </div> 
+      </div> <!-- purple -->
+      <div id = "container1_2">
+          <div id = "blue">
+            <img src = "https://dl.dropboxusercontent.com/s/f0pvu8iauknmuvr/choose.png?dl=0"/>
+            <div id="fillings" class="backFil3"><p id = "fillings_p">Choose<br>your dessert</p></div> 
+          </div> <!-- blue -->
+          <div class = "option" id="cake">
+            <img src = "https://dl.dropboxusercontent.com/s/kuxrchzkd8568z8/cake.png?dl=0" alt = "Cake"/>
+            <div id="choose" class="choose"><p id="choose_opt" class="choose_opt">Cake</p></div> 
+          </div> <!-- option -->
+          <div class = "option" id="pie">
+            <img src = "https://dl.dropboxusercontent.com/s/d33j88u91nw5r2y/pie.png?dl=0" alt = "Pie"/>
+            <div id="choose3" class="choose"><p id = "choose_opt3" class="choose_opt">Pie</p></div> 
+          </div> <!-- option -->
+          <div class = "option" id="cupcake">
+            <img src = "https://dl.dropboxusercontent.com/s/zx3ai1kqzvk57cy/cupcake.png?dl=0" alt = "Cupcake"/>  
+            <div id="choose5" class="choose"><p id = "choose_opt5" class="choose_opt">Cupcake</p></div>
+          </div>
+      </div> <!-- container1_2 -->
+    </div> <!-- container1 -->
+    <div id="bigflavors">
+      <div id = "blockHover"></div>
+        <div id="flavors">
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/jza72raboer8cct/whipped_cream.png?dl=0" alt = "Whipped Cream"/>
+            <div class="container2">
+              <div id="filter" class = "filter">
+                <p id="fruit" class = "fruit">Whipped Cream</p></div>
+              <div id="circle" class="size circle">
+                <div id="ok" class="size3 ok"></div>
+              </div>    
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/p3ncivqkuuvitns/coconut.png?dl=0" alt = "Coconut"/>
+            <div class="container2">
+              <div id="filter2" class = "filter"><p id = "fruit2" class = "fruit">Coconut</p></div>
+              <div id="circle2" class="size circle">
+                <div id="ok2" class="size3 ok"></div>
+              </div>    
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/gsgc8wyzgq7rhnr/white_chocolate.png?dl=0" alt = "White Chocolate"/>
+            <div class="container2">
+              <div id="filter3" class = "filter"><p id = "fruit3" class = "fruit">White Chocolate</p></div>
+              <div id="circle3" class="size circle">
+                <div id="ok3" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/nyzjsdiraeoksk7/honey.png?dl=0" alt = "Honey"/>
+            <div class="container2">
+              <div id="filter4" class = "filter"><p id = "fruit4" class = "fruit">Honey</p></div>
+              <div id="circle4" class="size circle">
+                <div id="ok4" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/herf0l0fzu5t9j8/lemon.png?dl=0" alt = "Lemon"/>
+            <div class="container2">
+              <div id="filter5" class = "filter"><p id = "fruit5" class = "fruit">Lemon</p></div>
+              <div id="circle5" class="size circle">
+                <div id="ok5" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/lu7lzdfo9gd35zm/banana.png?dl=0" alt = "Banana"/>
+            <div class="container2">
+              <div id="filter6" class = "filter"><p id = "fruit6" class = "fruit">Banana</p></div>
+              <div id="circle6" class="size circle">
+                <div id="ok6" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/ey7n30u8mz7bedl/pineapple.png?dl=0" alt = "Pineapple"/>
+            <div class="container2">
+              <div id="filter7" class = "filter"><p id = "fruit7" class = "fruit">Pineapple</p></div>
+              <div id="circle7" class="size circle">
+                <div id="ok7" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/vw3lk08a9tpwgoj/grape.png?dl=0" alt = "Grape"/>
+            <div class="container2">
+              <div id="filter8" class = "filter"><p id = "fruit8" class = "fruit">Grape</p></div>
+              <div id="circle8" class="size circle">
+                <div id="ok8" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/8o5we61r8cw5y79/green_apple.png?dl=0" alt = "Green Apple"/>
+            <div class="container2">
+              <div id="filter9" class = "filter"><p id = "fruit9" class = "fruit">Green Apple</p></div>
+              <div id="circle9" class="size circle">
+                <div id="ok9" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/o7fmicfno05498i/kiwi.png?dl=0" alt = "Kiwi"/>
+            <div class="container2">
+              <div id="filter10" class = "filter"><p id = "fruit10" class = "fruit">Kiwi</p></div>
+              <div id="circle10" class="size circle">
+                <div id="ok10" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/exmb62mjto9d6ib/orange.png?dl=0" alt = "Orange"/>
+            <div class="container2">
+              <div id="filter11" class = "filter"><p id = "fruit11" class = "fruit">Orange</p></div>
+              <div id="circle11" class="size circle">
+                <div id="ok11" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/jtpw34fl4hp77mv/strawberry.png?dl=0" alt = "Strawberry"/>
+            <div class="container2">
+              <div id="filter12" class = "filter"><p id = "fruit12" class = "fruit">Strawberry</p></div>
+              <div id="circle12" class="size circle">
+                <div id="ok12" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/ii8joes78by75lf/cherry.png?dl=0" alt = "Cherry"/>
+            <div class="container2">
+              <div id="filter13" class = "filter"><p id = "fruit13" class = "fruit">Cherry</p></div>
+              <div id="circle13" class="size circle">
+                <div id="ok13" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/mxkb6guwjfylfzm/raspberry.png?dl=0" alt = "Raspberry"/>
+            <div class="container2">
+              <div id="filter14" class = "filter"><p id = "fruit14" class = "fruit">Raspberry</p></div>
+              <div id="circle14" class="size circle">
+                <div id="ok14" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/kwyj1wwl6ahw5r4/litchi.png?dl=0" alt = "Litchi"/>
+            <div class="container2">
+              <div id="filter15" class = "filter"><p id = "fruit15" class = "fruit">Litchi</p></div>
+              <div id="circle15" class="size circle">
+                <div id="ok15" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/bhz62ear0e7n8tm/cookie.png?dl=0" alt = "Cookies"/>
+            <div class="container2">
+              <div id="filter16" class = "filter"><p id = "fruit16" class = "fruit">Cookies</p></div>
+              <div id="circle16" class="size circle">
+                <div id="ok16" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/7snueli2nca7fgo/hazelnut.png?dl=0" alt = "Hazelnut"/>
+            <div class="container2">
+              <div id="filter17" class = "filter"><p id = "fruit17" class = "fruit">Hazelnut</p></div>
+              <div id="circle17" class="size circle">
+                <div id="ok17" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/zxt8664vqkg3k6d/peach.png?dl=0" alt = "Peach"/>
+            <div class="container2">
+              <div id="filter18" class = "filter"><p id = "fruit18" class = "fruit">Peach</p></div>
+              <div id="circle18" class="size circle">
+                <div id="ok18" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/kq2hkjktb4d8giw/peanut.png?dl=0" alt = "Peanut"/>
+            <div class="container2">
+              <div id="filter19" class = "filter"><p id = "fruit19" class = "fruit">Peanut</p></div>
+              <div id="circle19" class="size circle">
+                <div id="ok19" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/v6lo5boa68emegz/chocolate.png?dl=0" alt = "Chocolate"/>
+            <div class="container2">
+              <div id="filter20" class = "filter"><p id = "fruit20" class = "fruit">Chocolate</p></div>
+              <div id="circle20" class="size circle">
+                <div id="ok20" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/2ovj7nmasa63q1m/walnut.png?dl=0" alt = "Walnut"/>
+            <div class="container2">
+              <div id="filter21" class = "filter"><p id = "fruit21" class = "fruit">Walnut</p></div>
+              <div id="circle21" class="size circle">
+                <div id="ok21" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/o8j27vydkll5b8e/cinnamon.png?dl=0" alt = "Cinnamon"/>
+            <div class="container2">
+              <div id="filter22" class = "filter"><p id = "fruit22" class = "fruit">Cinnamon</p></div>
+              <div id="circle22" class="size circle">
+                <div id="ok22" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/7o6nt6k1j5358j8/coffee.png?dl=0" alt = "Coffee"/>
+            <div class="container2">
+              <div id="filter23" class = "filter"><p id = "fruit23" class = "fruit">Coffee</p></div>
+              <div id="circle23" class="size circle">
+                <div id="ok23" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/x61mv9sscynjear/raisin.png?dl=0" alt = "Raisin"/>
+            <div class="container2">
+              <div id="filter24" class = "filter"><p id = "fruit24" class = "fruit">Raisin</p></div>
+              <div id="circle24" class="size circle">
+                <div id="ok24" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+          <div class="container">
+            <img src="https://dl.dropboxusercontent.com/s/y4tg42ybfprlbmy/blackberry.png?dl=0" alt = "Blackberry"/>
+            <div class="container2">
+              <div id="filter25" class = "filter"><p id = "fruit25" class = "fruit">Blackberry</p></div>
+              <div id="circle25" class="size circle">
+                <div id="ok25" class="size3 ok"></div>
+              </div>
+            </div> <!-- container2 -->
+          </div> <!-- container -->
+        </div> <!-- flavors -->
+    </div> <!-- bigflavors -->
+
+    <!-- FORM -->
+
+    <fieldset id = "form">
+      <p class = "dessert">Dessert set:</p><br>
+      <p id = "formP" class = "dessert"></p><br>
+      <p id = "numInputP"></p>
+      <div id = "inputDiv">
+        <p id = "inputP">Quantity</p>
+        <input type = "number" placeholder = "0" id = "numInput">
+      </div>
+      
+      <p id = "radioP"></p>
+      <input type = "radio" id = "store" class = "labelRadio" name = "choose">
+      <label for = "store">I wish to retrieve it at the coffee shop</label><br>
+      <input type = "radio" id = "deliver" class = "labelRadio" name = "choose">
+      <label for = "deliver">I wish it to be delivered at my home</label>
+
+      <p id ="nameP">Full name</p>
+      <input type = "text" id = "name">
+      <p id = "emailP">E-mail</p>
+      <input type = "email" autocomplete = "on" id = "email">
+      <div class = "divAddress" id = "divAddress">
+        <p class = "address" id = "addressP">Address</p>
+        <input type = "text" class = "address" id = "addressText">
+      </div>
+      <button id = "submit">Submit</button>
+      <button id = "cancel">Cancel</button>
+    </fieldset>
+
+    <!-- ALERT FILLING -->
+
+    <div id="alertFilling" class = "modal">
+      <div id="alertFillingContent" class = "modalContent">
+        <div>
+          <p>You must choose at least one filling</p>
+        </div>
+        <button class = "doYou" id = "fillOk">ok</button>
+      </div>
+    </div>
+
+    <!-- CANCEL CONFIRMATION -->
+
+    <div id="modalCancel" class = "modal">
+      <div id="modalCancelContent" class = "modalContent">
+        <div>
+          <p>Do you want to cancel your order?</p>
+        </div>
+        <button class = "doYou" id = "no">no</button>
+        <button class = "doYou" id = "yes">yes</button>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+
+    <div id="submitQuestion" class = "modal">
+      <div id="submitQuestionContent">
+        <div>
+          <p id = "submitP">Do you want to submit your order?</p>
+        </div>
+        <button class = "doYou" id = "questionYes">yes</button>
+        <button class = "doYou" id = "questionNo">no</button>
+      </div>
+    </div>
+    </body>
+</html>
